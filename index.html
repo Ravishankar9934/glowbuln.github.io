@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            display: block;
+            margin: 23px auto;
+        }
+        .btn{
+            padding: 20px;
+            background-color: green;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <img src="img/bulb3.png" alt="" id="bulb" class="center">
+    <button id="toggleBtn" class="center btn">Turn On</button>
+
+    <script>
+        let btn = document.getElementById('toggleBtn')
+        let bulb = document.getElementById('bulb')
+        btn.addEventListener('click',toggleBulb)
+
+        function toggleBulb(e){
+            //har event listear ke pass ek property hota hian jo e or event as  a argument leta hain
+            // console.log(e)
+            if(btn.textContent.includes('On')){
+                bulb.src = "img/bulb4.png"
+                btn.textContent="Turn Off"
+            }else{
+                bulb.src="img/bulb3.png"
+                btn.textContent="Turn On"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
